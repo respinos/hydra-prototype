@@ -17,3 +17,16 @@
 //= require blacklight/blacklight
 
 //= require_tree .
+//= require browse_everything
+
+$().ready(function() {
+    var $form = $(".form-group.optional.rackham_files");
+    $('<p><button class="btn btn-lg" id="browse-the-cloud">BROWSE</button></p>').appendTo($form);
+    var $btn = $("#browse-the-cloud");
+
+    $btn.browseEverything({
+        route: "/demo01/browse",
+        target: "#new_rackham"
+    });
+
+})

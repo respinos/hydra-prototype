@@ -27,6 +27,7 @@ module MiD
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.relative_url_root = '/demo01'
     config.action_controller.relative_url_root = '/demo01'
     config.minter_statefile = '/tmp/njaffer-minter-state'
     config.active_record.raise_in_transactional_callbacks = true
