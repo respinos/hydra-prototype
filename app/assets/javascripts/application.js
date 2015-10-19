@@ -20,9 +20,11 @@
 //= require browse_everything
 
 $().ready(function() {
-    var $form = $(".form-group.optional.rackham_files");
+    var $form = $(".form-group.optional.rackham_files,.simple_form.new_generic_file");
     $('<p><button class="btn btn-lg" id="browse-the-cloud">BROWSE</button></p>').appendTo($form);
     var $btn = $("#browse-the-cloud");
+
+    $btn.on('click', function(e) { e.preventDefault(); });
 
     $btn.browseEverything({
         route: "/demo01/browse",
